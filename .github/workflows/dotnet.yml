@@ -17,8 +17,8 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./QuadraticEquationSolver/QuadraticEquationSolver.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore  ./QuadraticEquationSolver/QuadraticEquationSolver.sln
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal  ./QuadraticEquationSolver/QuadraticEquationSolver.sln
